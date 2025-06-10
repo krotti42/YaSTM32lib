@@ -25,7 +25,7 @@
 #ifndef _YASTM32LIB_STM32_H745_PWR_H
 #define _YASTM32LIB_STM32_H745_PWR_H
 
-struct stm32_pwr {
+struct stm32_pregs_pwr {
     volatile unsigned int CR1;              /* PWR control register 1 */
     volatile unsigned int CSR1;             /* PWR control status register 1 */
     volatile unsigned int CR2;              /* PWR control register 2 */
@@ -39,7 +39,7 @@ struct stm32_pwr {
 };
 
 #define PWR_BASE                        0x58024800
-#define PWR                             ((struct stm32_pwr *) PWR_BASE)
+#define PWR                             ((struct stm32_pregs_pwr *) PWR_BASE)
 
 /**
  * PWR control register 1 flags and bit fields
